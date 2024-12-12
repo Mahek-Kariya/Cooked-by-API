@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+TZ+Guides&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dancing+Script:wght@400..700&family=Playwrite+TZ+Guides&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Cooked by API 🤖</title>
+</head>
+<body>
+    <div class="container">
+        <img class="avacado" height="200px" width="150px" src="https://media-public.canva.com/tbF80/MAE_V-tbF80/1/tl.png" draggable="false" alt="Cute Avocado Fruit">
+        
+        <img class="rice-balls" height="200px" width="250px" src="https://media-public.canva.com/4kmOI/MAFTDu4kmOI/1/s.png" draggable="false" alt="Kaopoon ข้าวปุ้น">
+        <img class="shrimp"  height="200px" width="250px" src="https://media-public.canva.com/Q_iEY/MAFFR1Q_iEY/1/tl.png" draggable="false" alt="Food 5">
+        <img class="Ramen" height="200px" width="250px" src="https://media-public.canva.com/5ubT4/MAGE7f5ubT4/1/tl.png" draggable="false" alt="Japanese Ramen Illustration">
+        <img class="dumplings" height="200px" width="250px" src="https://media-public.canva.com/vSfDo/MAF-OqvSfDo/1/s.png" draggable="false" alt="Illustration of Meat Bun (Nikuman)">
+        <img class="sushi"  height="200px" width="250px"  src="https://media-public.canva.com/cJzSY/MAF-ORcJzSY/1/s.png" draggable="false" alt="Illustration of Futomaki Sushi Roll with Egg, Cucumber, and Kanpyo">
+        
+    </div>
+    <h1>Cooked by API</h1>
+    
+          <% if (!locals.recipe) { %>
+              <p class="whiteboard-content">Generate a random recipe 👩🏻‍🍳</p>
+          <% } else { %>
+              <div class="recipe-container">
+                  <h2  class="whiteboard-content"><%= recipe.title %></h2>
+                  <div class="recipe-image">
+                      <img src="<%= recipe.image %>" alt="<%= recipe.title %>">
+                  </div>
+
+                  <h3 class="whiteboard-content">Ingredients:</h3>
+                  <ul>
+                      <% recipe.extendedIngredients.forEach(function(ingredient) { %>
+                          <li  class="whiteboard-content"><%= ingredient.amount %> <%= ingredient.unit %> <%= ingredient.name %></li>
+                      <% }); %>
+                  </ul>
+
+                  <h3  class="whiteboard-content">Instructions:</h3>
+                  <ol class="whiteboard-content">
+                    <%- recipe.instructions %>
+                  </ol>
+              </div>
+          <% } %>
+     
+
+      <button id="random" onclick="window.location.href='/random-recipe'">Get Random Recipe</button>
+      
+    
+</body>
+<footer>
+  Created with food👩🏻‍🍳 and code👩🏻‍💻 by Mahek❤.
+</footer>
+</html>

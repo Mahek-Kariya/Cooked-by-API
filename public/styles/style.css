@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+  }
+  body {
+    background-color: #ffffff; /* White background to mimic paper */
+    background-size: 100% 30px; /* 30px height for the line spacing */
+    background-image: repeating-linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 29px, 
+        #898887 29px, 
+        #898887 30px
+    ); /* Gray line at every 30px */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container{
+    border-bottom: solid #543A14 15px;
+    border-top: solid #543A14 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 6rem;
+    color: #543A14;
+    font-family: "Dancing Script", cursive;
+}
+
+  
+  /* Recipe Content */
+.whiteboard-content {
+    font-family: "Comic Neue", cursive;
+    font-weight: 600; /* Makes the font slightly bolder */
+    font-style: normal;
+    font-size: 1.4rem; /* Slightly larger font for better readability */
+    text-align: center;
+    overflow-y: auto;
+    color: #222; /* Darker gray, close to black */
+    line-height: 1.6; /* Improves spacing between lines */
+}
+
+#random {
+    background-color: #846952; /* Green background */
+    color: black; /* White text */
+    border: 3px solid #000000; /* No borders */
+    padding: 15px 32px; /* Padding inside the button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Keep the button inline */
+    font-size: 16px; /* Set font size */
+    margin-top: 0%;/* Margin from the top */
+    margin-bottom: 50px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+footer{
+    font-family: "Comic Neue", cursive;
+    text-align: center;
+    font-weight: 600; /* Makes the font slightly bolder */
+    font-style: normal;
+    font-size: 1rem; /* Slightly larger font for better readability */
+    text-align: center;
+    overflow-y: auto;
+    color: #222; /* Darker gray, close to black */
+}
+
+
